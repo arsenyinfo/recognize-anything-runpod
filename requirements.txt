@@ -1,5 +1,5 @@
 timm==0.4.12
-transformers==4.15.0
+transformers>=4.15.0
 fairscale==0.4.4
 pycocoevalcap
 torch
@@ -7,3 +7,5 @@ torchvision
 Pillow
 scipy
 git+https://github.com/openai/CLIP.git
+runpod==0.9.11
+b2sdk==1.21.0

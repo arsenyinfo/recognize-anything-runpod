@@ -10,7 +10,7 @@ def inference_tag2text(image, model, input_tag="None"):
     with torch.no_grad():
         caption, tag_predict = model.generate(image,
                                               tag_input=None,
-                                              max_length=50,
+                                              max_length=100,
                                               return_tag_predict=True)
 
     if input_tag == '' or input_tag == 'none' or input_tag == 'None':
@@ -24,7 +24,7 @@ def inference_tag2text(image, model, input_tag="None"):
         with torch.no_grad():
             caption, input_tag = model.generate(image,
                                                 tag_input=input_tag_list,
-                                                max_length=50,
+                                                max_length=100,
                                                 return_tag_predict=True)
 
         return tag_predict[0], input_tag[0], caption[0]
